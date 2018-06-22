@@ -17,12 +17,43 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family);
+        setContentView(R.layout.word_list);
+
+        ArrayList<Word> numberlist = new ArrayList<>();
+        numberlist.add(new Word ("father","әpә"));
+        numberlist.add(new Word("mother","әṭa"));
+        numberlist.add(new Word("son","angsi"));
+        numberlist.add(new Word("daughter","tune"));
+        numberlist.add(new Word("older brother","taachi"));
+        numberlist.add(new Word("younger brother","chalitti"));
+        numberlist.add(new Word("older sister","teṭe"));
+        numberlist.add(new Word("younger sister","kolliti"));
+        numberlist.add(new Word("grandmother","ama"));
+        numberlist.add(new Word("grandfather","paapa"));
+
+        WordAdapter itemsAdapter = new WordAdapter(this,numberlist);
+
+        ListView listView = (ListView) findViewById(R.id.list);
+
+        listView.setAdapter(itemsAdapter);
+       /* LinearLayout rootView  = (LinearLayout) findViewById(R.id.rootView);
+        int index = 0;
+        for(index =0; index<numberlist.size();index++)
+        {
+            TextView wordView = new TextView(this);
+            wordView.setText(numberlist.get(index));
+            rootView.addView(wordView);}*/
+
+
+
     }
 }
