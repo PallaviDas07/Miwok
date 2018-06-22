@@ -31,18 +31,18 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> numberlist = new ArrayList<>();
-        numberlist.add(new Word ("One","lutti"));
-        numberlist.add(new Word("Two","ottiko"));
-        numberlist.add(new Word("Three","tolookossu"));
-        numberlist.add(new Word("Four","oyissa"));
-        numberlist.add(new Word("Five","massoka"));
-        numberlist.add(new Word("Six","temmoka"));
-        numberlist.add(new Word("Seven","kenekaku"));
-        numberlist.add(new Word("Eight","kawanita"));
-        numberlist.add(new Word("Nine","wo'e"));
-        numberlist.add(new Word("Ten","na'aacha"));
+        numberlist.add(new Word ("One","lutti", R.drawable.number_one));
+        numberlist.add(new Word("Two","ottiko",R.drawable.number_two));
+        numberlist.add(new Word("Three","tolookossu",R.drawable.number_three));
+        numberlist.add(new Word("Four","oyissa",R.drawable.number_four));
+        numberlist.add(new Word("Five","massoka",R.drawable.number_five));
+        numberlist.add(new Word("Six","temmoka",R.drawable.number_six));
+        numberlist.add(new Word("Seven","kenekaku",R.drawable.number_seven));
+        numberlist.add(new Word("Eight","kawanita",R.drawable.number_eight));
+        numberlist.add(new Word("Nine","wo'e",R.drawable.number_nine));
+        numberlist.add(new Word("Ten","na'aacha",R.drawable.number_ten));
 
-        WordAdapter itemsAdapter = new WordAdapter(this,numberlist);
+        WordAdapter itemsAdapter = new WordAdapter(this,numberlist,R.color.category_numbers);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

@@ -30,17 +30,17 @@ public class ColorsActivity extends AppCompatActivity {
 
 
         ArrayList<Word> numberlist = new ArrayList<>();
-        numberlist.add(new Word ("red","weṭeṭṭi"));
-        numberlist.add(new Word("green","chokokki"));
-        numberlist.add(new Word("brown","ṭakaakki"));
-        numberlist.add(new Word("gray","ṭopoppi"));
-        numberlist.add(new Word("black","kululli"));
-        numberlist.add(new Word("white","kelelli"));
-        numberlist.add(new Word("dusty yellow","ṭopiisә"));
-        numberlist.add(new Word("mustard yellow","chiwiiṭә"));
+        numberlist.add(new Word ("red","weṭeṭṭi",R.drawable.color_red));
+        numberlist.add(new Word("green","chokokki",R.drawable.color_green));
+        numberlist.add(new Word("brown","ṭakaakki",R.drawable.color_brown));
+        numberlist.add(new Word("gray","ṭopoppi",R.drawable.color_gray));
+        numberlist.add(new Word("black","kululli",R.drawable.color_black));
+        numberlist.add(new Word("white","kelelli",R.drawable.color_white));
+        numberlist.add(new Word("dusty yellow","ṭopiisә",R.drawable.color_dusty_yellow));
+        numberlist.add(new Word("mustard yellow","chiwiiṭә",R.drawable.color_mustard_yellow));
 
 
-        WordAdapter itemsAdapter = new WordAdapter(this,numberlist);
+        WordAdapter itemsAdapter = new WordAdapter(this,numberlist,R.color.category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

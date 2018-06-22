@@ -40,7 +40,7 @@ public class PhrasesActivity extends AppCompatActivity {
         numberlist.add(new Word("Let’s go.","yoowutis"));
         numberlist.add(new Word("Come here.","әnni'nem"));
 
-        WordAdapter itemsAdapter = new WordAdapter(this,numberlist);
+        WordAdapter itemsAdapter = new WordAdapter(this,numberlist,R.color.category_phrases);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
